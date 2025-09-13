@@ -284,19 +284,6 @@ src/
 - ✅ Type-safe implementation with proper error handling
 - ✅ Clean, maintainable code structure
 
-## 🤝 Contributing
-
-This is a technical assessment project. For production use, consider:
-- Adding proper error handling
-- Implementing comprehensive testing
-- Adding security measures
-- Following accessibility guidelines
-- Adding performance optimizations
-
-## 📄 License
-
-This project is created for technical assessment purposes.
-
 ---
 
-**Built with ❤️ using Next.js, TypeScript, and Tailwind CSS**
+**Built with ❤️ using Next.js, TypeScript, and Tailwind CSS by Vaidik**
