@@ -2,6 +2,8 @@
 
 A professional contract management tool for wedding vendors that allows them to quickly create, edit, and digitally sign contracts with AI assistance. Built with Next.js 15, TypeScript, and shadcn/ui components.
 
+deployed link: https://wedding-vendor-contract-builder.vercel.app
+
 ## 🚀 Features
 
 - **Authentication System**: Simple login with test vendor accounts
