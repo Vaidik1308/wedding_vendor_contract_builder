@@ -39,12 +39,12 @@ export default function ContractList() {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between gap-4 md:gap-0 w-full md:items-center md:flex-row flex-col">
         <AnimatedElement variant="fadeInLeft">
           <h2 className="text-2xl font-bold text-gray-900">Your Contracts</h2>
         </AnimatedElement>
         <AnimatedElement variant="fadeInRight">
-          <Button onClick={() => router.push('/contracts/new')}>
+          <Button className='text-xs md:text-base' onClick={() => router.push('/contracts/new')}>
           Create New Contract
           </Button>
         </AnimatedElement>
