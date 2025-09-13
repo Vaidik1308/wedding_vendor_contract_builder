@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { AuthUser } from '@/lib/types';
 import AnimatedElement from '../common/AnimatedElement';
 import { toast } from 'sonner';
+import { MobileSidebar } from './MobileSidebar';
 
 export default function Header() {
   const [user, setUser] = useState<AuthUser | null>(null);
@@ -29,22 +30,28 @@ export default function Header() {
     <header className="bg-white shadow-sm border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <AnimatedElement variant='fadeIn' className="flex items-center">
-            <h1 className="text-xl font-semibold text-gray-900">
+          <AnimatedElement variant='fadeIn' className="flex items-start md:items-center md:flex-row flex-col">
+            <h1 className="md:**:text-xl font-semibold text-gray-900">
               Wedding Vendor Portal
             </h1>
-            <span className="ml-4 px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">
+            <span className="md:ml-4 px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">
               {user.type}
             </span>
           </AnimatedElement>
-          <AnimatedElement variant='fadeIn' className="flex items-center space-x-4">
-            <span className="text-sm text-gray-700">
+          <AnimatedElement variant='fadeIn' className=" hidden md:flex items-center space-x-4">
+            <span className="hidden md:flex text-sm text-gray-700">
               Welcome, {user.name}
             </span>
             <Button className='cursor-pointer' variant="outline" size="sm" onClick={handleLogout}>
               Logout
             </Button>
           </AnimatedElement>
+          <div className='md:hidden flex'>
+            <MobileSidebar 
+              handleLogout={handleLogout}
+              user={user}
+            />
+          </div>
         </div>
       </div>
     </header>
