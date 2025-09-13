@@ -38,7 +38,7 @@ export const MobileSidebar = ({ user, handleLogout }: { user: AuthUser, handleLo
               Dashboard
             </Button>
           </Link>
-          <Link onClick={() => setOpen(false)} className="w-[100%]" href="/" onClick={handleLogout}>
+          <Link onClick={() => setOpen(false)} className="w-[100%]" href="/" >
             <Button className="w-full flex justify-center" variant="outline">
               <LogOut className="size-4" />
               Logout
