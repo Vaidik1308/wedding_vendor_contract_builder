@@ -136,15 +136,15 @@ export default function ContractView({ contractId }: ContractViewProps) {
             {contract.signature && (
               <div className="border-t pt-6">
                 <h3 className="font-semibold text-gray-700 mb-3">Digital Signature</h3>
-                <div className="bg-gray-50 p-4 rounded-lg">
+                <div className="bg-gray-50 p-4 rounded-lg max-w-full md:w-fit">
                   {contract.signature.signatureType === 'drawn' ? (
-                    <div>
+                    <div className='w-full max-w-full'>
                       <Image 
                         src={contract.signature.signatureData} 
                         alt="Digital Signature" 
                         width={300}
                         height={100}
-                        className="max-w-xs border border-gray-300 rounded"
+                        className=" border border-gray-300 rounded max-w-full"
                       />
                       <p className="text-sm text-gray-600 mt-2">
                         Signed by: {contract.signature.signerName}
@@ -190,7 +190,7 @@ export default function ContractView({ contractId }: ContractViewProps) {
 
       {showSignaturePad && (
         <AnimatedElement variant="fadeIn" className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-lg max-w-2xl w-full max-w-full max-h-[90vh] overflow-y-auto">
             <SignaturePad
               onSave={handleSignatureSave}
               onCancel={() => setShowSignaturePad(false)}
