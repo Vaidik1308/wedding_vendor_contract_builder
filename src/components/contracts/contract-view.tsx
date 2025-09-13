@@ -87,7 +87,7 @@ export default function ContractView({ contractId }: ContractViewProps) {
       <AnimatedElement variant="fadeInUp">
         <Card>
           <CardHeader>
-            <div className="flex justify-between items-start">
+            <div className="flex md:flex-row flex-col-reverse justify-between items-start">
               <div>
                 <CardTitle className="text-2xl">{contract.clientName}</CardTitle>
                 <CardDescription>
@@ -95,7 +95,7 @@ export default function ContractView({ contractId }: ContractViewProps) {
                 </CardDescription>
               </div>
               <div className="text-right">
-                <div className={`inline-block px-3 py-1 text-sm font-medium rounded-full ${
+                <div className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${
                   contract.status === 'signed' 
                     ? 'bg-green-100 text-green-800' 
                     : 'bg-yellow-100 text-yellow-800'
