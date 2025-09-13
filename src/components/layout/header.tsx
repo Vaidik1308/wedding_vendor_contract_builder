@@ -30,11 +30,11 @@ export default function Header() {
     <header className="bg-white shadow-sm border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <AnimatedElement variant='fadeIn' className="flex items-start md:items-center md:flex-row flex-col">
+          <AnimatedElement variant='fadeIn' className="flex gap-2 md:gap-0">
             <h1 className="md:**:text-xl font-semibold text-gray-900">
-              Wedding Vendor Portal
+              Wedding AI
             </h1>
-            <span className="md:ml-4 px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">
+            <span className="md:ml-4 px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-xs">
               {user.type}
             </span>
           </AnimatedElement>
